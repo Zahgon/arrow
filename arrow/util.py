@@ -61,10 +61,7 @@ def validate_ordinal(value: Any) -> None:
     :param value: the input to be checked
 
     """
-    if isinstance(value, bool) or not isinstance(value, int):
-        raise TypeError(f"Ordinal must be an integer (got type {type(value)}).")
-    if not (MIN_ORDINAL <= value <= MAX_ORDINAL):
-        raise ValueError(f"Ordinal {value} is out of range.")
+    pass
 
 
 def normalize_timestamp(timestamp: float) -> float:
@@ -104,11 +101,6 @@ def iso_to_gregorian(iso_year: int, iso_week: int, iso_day: int) -> datetime.dat
     return gregorian
 
 
-def validate_bounds(bounds: str) -> None:
-    if bounds != "()" and bounds != "(]" and bounds != "[)" and bounds != "[]":
-        raise ValueError(
-            "Invalid bounds. Please select between '()', '(]', '[)', or '[]'."
-        )
 
 
 __all__ = ["next_weekday", "is_timestamp", "validate_ordinal", "iso_to_gregorian"]

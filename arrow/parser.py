@@ -879,7 +879,7 @@ class DateTimeParser:
         :returns: A compiled regular expression pattern that matches any of the choices.
         :rtype: re.Pattern[str]
         """
-        return re.compile(r"({})".format("|".join(choices)), flags=flags)
+        pass
 
 
 class TzinfoParser:
